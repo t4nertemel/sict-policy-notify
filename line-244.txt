@@ -1,2 +1,0 @@
-original WORKING
-                    $message .= "Please update the policy by: " . $notification['renewal_date'] . "\n\n";
