@@ -5,7 +5,9 @@
  * Version: 0.6
  * Author: Taner Temel
  * Author URI: https://www.bolton365.net
+ * Text Domain: sict-policy-notify
  */
+// That's it - just the header
 
 add_action('wp', 'sict_send_policy_notifications'); //remove this line
 
