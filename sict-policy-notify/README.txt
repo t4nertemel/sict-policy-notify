@@ -64,15 +64,8 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 == Changelog ==
 
 = 0.6 =
-✅ Successful Updates:
-Added Statutory Requirement Checkbox - Both in add and edit forms
-Separated Tables - Statutory vs Non-statutory policies now display in separate, clearly marked tables
-Fixed CSS Scope - Styles now only affect your plugin's tables, not the entire WordPress admin
-Enhanced Visual Design - Different color schemes for statutory (red) and non-statutory (blue) tables
-Email Enhancement - Statutory policies are clearly marked in notification emails
-
-🔧 Key Technical Fix:
-The CSS specificity issue was resolved by changing from broad selectors like table to specific ones like table.policy-table, ensuring your styles only target your plugin's elements.
+Added new Statutory checkbox
+Added 2 sections to Current Policy Notifications tables 1 for statutory policies and 1 for none statutory policies.
 
 == Arbitrary section ==
 New options suggested by Mo at The Valley

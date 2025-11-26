@@ -55,68 +55,65 @@ label[for="is_statutory"] {
     cursor: pointer;
 }
 
-/* CHANGED: Only target tables with class 'policy-table' - this ensures only your plugin tables are affected */
-table.policy-table {
+/* Base table styling */
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-/* CHANGED: Only target th and td within policy tables */
-table.policy-table th, 
-table.policy-table td {
+th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-/* CHANGED: Only target th within policy tables */
-table.policy-table th {
+th {
     background-color: #f2f2f2;
 }
 
 /* NEW: Statutory table specific styling */
-table.policy-table.statutory {
+.policy-table.statutory {
     border: 3px solid #dc3232; /* Red border for statutory */
     margin-bottom: 30px;
 }
 
-table.policy-table.statutory th {
+.policy-table.statutory th {
     background-color: #dc3232;
     color: white;
     border-color: #dc3232;
 }
 
-table.policy-table.statutory tr:nth-child(even) {
+.policy-table.statutory tr:nth-child(even) {
     background-color: #ffe6e6; /* Light red for even rows */
 }
 
-table.policy-table.statutory tr:hover {
+.policy-table.statutory tr:hover {
     background-color: #ffcccc; /* Darker red on hover */
 }
 
 /* NEW: Non-statutory table specific styling */
-table.policy-table.non-statutory {
+.policy-table.non-statutory {
     border: 3px solid #0073aa; /* Blue border for non-statutory */
     margin-bottom: 30px;
 }
 
-table.policy-table.non-statutory th {
+.policy-table.non-statutory th {
     background-color: #0073aa;
     color: white;
     border-color: #0073aa;
 }
 
-table.policy-table.non-statutory tr:nth-child(even) {
+.policy-table.non-statutory tr:nth-child(even) {
     background-color: #e6f7ff; /* Light blue for even rows */
 }
 
-table.policy-table.non-statutory tr:hover {
+.policy-table.non-statutory tr:hover {
     background-color: #cceeff; /* Darker blue on hover */
 }
 
 /* NEW: Statutory badge in table */
-table.policy-table.statutory td strong {
+.policy-table.statutory td strong {
     color: #dc3232;
     font-style: italic;
 }
@@ -138,20 +135,19 @@ table.policy-table.statutory td strong {
 }
 
 /* NEW: Section header styling for better separation */
-.wrap h2:nth-of-type(3), /* Statutory section header */
-.wrap h2:nth-of-type(4) { /* Non-statutory section header */
-    padding: 10px 15px;
+h2:contains("Statutory"), 
+h2:contains("Non-Statutory") {
+    padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    border-left: 4px solid;
 }
 
-.wrap h2:nth-of-type(3) {
+h2:contains("Statutory") {
     background-color: #ffe6e6;
-    border-left-color: #dc3232;
+    border-left: 4px solid #dc3232;
 }
 
-.wrap h2:nth-of-type(4) {
+h2:contains("Non-Statutory") {
     background-color: #e6f7ff;
-    border-left-color: #0073aa;
+    border-left: 4px solid #0073aa;
 }
